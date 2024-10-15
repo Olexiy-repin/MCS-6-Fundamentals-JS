@@ -30,6 +30,16 @@
 */
 // const minutes = 15;
 
+// if (minutes >= 0 && minutes < 15) {
+//   console.log('Перша чверть години!');
+// } else if (minutes >= 15 && minutes < 30) {
+//   console.log('Друга чверть години!');
+// } else if (minutes >= 30 && minutes < 45) {
+//   console.log('Тертя чверть години!');
+// } else if (minutes >= 45 && minutes < 60) {
+//   console.log('Четверта чверть години!');
+// }
+
 /*
 ?  Перепишіть код за допомогою однієї конструкції switch:
 */
@@ -45,6 +55,31 @@
 //   console.log('Ви ввели якесь інше число');
 // }
 
+// switch (number) {
+//   case 0: {
+//     console.log('Ви ввели число 0');
+
+//     break;
+//   }
+
+//   case 1: {
+//     console.log('Ви ввели число 1');
+
+//     break;
+//   }
+
+//   case 2:
+//   case 3: {
+//     console.log('Ви ввели число 2, а може й 3');
+
+//     break;
+//   }
+
+//   default: {
+//     console.log('Ви ввели якесь інше число');
+//   }
+// }
+
 /*
 ? Напиши скрипт, який перевіряє можливість відкрити чат з користувачем.
 ? Для цього, користувач має бути:
@@ -56,7 +91,7 @@
 // const isFriend = true;
 // const isDnd = false;
 
-// let canOpenChat = null;
+// let canOpenChat = isFriend && isOnline && !isDnd;
 
 // console.log('Чи можна відкрити чат? ', canOpenChat);
 
@@ -70,6 +105,10 @@
 */
 // let link = 'https://my-site.com/about';
 
+// if (!link.endsWith('/') && link.includes('my-site')) {
+//   link += '/';
+// }
+
 // console.log(link);
 
 /*
@@ -78,6 +117,17 @@
 ? а для чисел, що діляться на 5 – 'Buzz'.
 ? Для чисел які кратні 3 та 5 = 'FizzBuzz'
 */
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log('FizzBuzz');
+//   } else if (i % 3 === 0) {
+//     console.log('Fizz');
+//   } else if (i % 5 === 0) {
+//     console.log('Buzz');
+//   } else {
+//     console.log(i);
+//   }
+// }
 
 /*
 ? Напиши цикл for, який виводить у консоль браузера
@@ -85,3 +135,9 @@
 */
 // const a = 20;
 // const b = 100;
+
+// for (let i = a; i <= b; i++) {
+//   if (i % 5 === 0) {
+//     console.log(i);
+//   }
+// }
