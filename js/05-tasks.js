@@ -10,7 +10,6 @@
 // console.log('values:', values);
 // console.log('rectSides:', rectSides);
 // console.log('rectArea:', rectArea);
-
 /*
 ? Напиши скрипт, який підраховує суму всіх парних чисел у масиві.
 */
@@ -53,6 +52,14 @@
 // const values = [17, -10, 94, -30, 1, 23, -20];
 // let min = values[0];
 
+// for (let i = 1; i < values.length; i++) {
+//   if (values[i] < min) {
+//     min = values[i];
+//   }
+// }
+
+// console.log(min);
+
 /*
 ? У нас є декілько масивів із зарплатами працівників із різних відділів, потрібно порахувати загальну суму зарплат
 */
@@ -60,3 +67,13 @@
 // const developersSalaries = [800, 1500, 4000];
 
 // let total = 0;
+
+// for (const salary of managerSalaries) {
+//   total += salary;
+// }
+
+// for (const salary of developersSalaries) {
+//   total += salary;
+// }
+
+// console.log(total);
