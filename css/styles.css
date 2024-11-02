@@ -1,0 +1,15 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.recipes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.recipes-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
