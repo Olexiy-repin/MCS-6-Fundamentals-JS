@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classList*</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <script src="../js/03-classlist.js" type="module" defer></script>
+
+    <style>
+      .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 250ms linear;
+      }
+      .modal {
+        width: 95%;
+        max-width: 400px;
+        height: 95%;
+        max-height: 550px;
+        background-color: rgb(255, 255, 255);
+      }
+      .is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="../index.html">Go back</a></p>
+
+    <header class="page-header">
+      <ul class="site-nav">
+        <li class="site-nav-item">
+          <a href="/about" class="site-nav-link js-site-nav-link">About</a>
+        </li>
+        <li class="site-nav-item">
+          <a href="/portfolio" class="site-nav-link js-site-nav-link">
+            Portfolio
+          </a>
+        </li>
+        <li class="site-nav-item">
+          <a href="/contact" class="site-nav-link js-site-nav-link">Contacts</a>
+        </li>
+      </ul>
+    </header>
+
+    <button class="modal-open-btn js-modal-open-btn" type="button">
+      Open modal
+    </button>
+    <div class="backdrop js-backdrop">
+      <div class="modal"></div>
+    </div>
+  </body>
+</html>
