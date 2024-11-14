@@ -9,3 +9,21 @@
 */
 
 const formEl = document.querySelector('.js-form');
+
+console.dir(formEl);
+
+const onFormSubmit = event => {
+  event.preventDefault();
+
+  const formData = {
+    email: formEl.elements.email.value,
+    password: formEl.elements.password.value,
+    comment: formEl.elements.comment.value,
+  };
+
+  console.log(formData);
+
+  formEl.reset();
+};
+
+formEl.addEventListener('submit', onFormSubmit);
