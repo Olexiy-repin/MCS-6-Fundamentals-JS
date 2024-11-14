@@ -43,8 +43,37 @@ const pictures = [
 */
 
 //* Функція для створення карточки createGalleryCard(cardInfo)
-const createGalleryCard = pictureInfo => {};
+const createGalleryCard = pictureInfo => {
+  // Створення li
+  const galleryItemEl = document.createElement('li');
+
+  galleryItemEl.classList.add('gallery-item');
+
+  // Створення a
+  const galleryLinkEl = document.createElement('a');
+
+  galleryLinkEl.href = '#';
+  galleryItemEl.append(galleryLinkEl);
+
+  // Створення img
+  const galleryImgEl = document.createElement('img');
+
+  galleryImgEl.src = pictureInfo.url;
+  galleryImgEl.alt = pictureInfo.alt;
+  galleryImgEl.width = pictureInfo.width;
+  galleryImgEl.height = pictureInfo.height;
+
+  galleryLinkEl.append(galleryImgEl);
+
+  return galleryItemEl;
+};
 
 //* Створення масиву елементів
+const galleryItemsArr = pictures.map(pictureInfo => createGalleryCard(pictureInfo));
+
+console.log(galleryItemsArr);
 
 //* Вставка колекції карток на сторінку
+const galleryEl = document.querySelector('.js-gallery');
+
+galleryEl.append(...galleryItemsArr);
